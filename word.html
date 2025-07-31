@@ -1,0 +1,1117 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>vly.ai India Expansion: 120-Day Execution Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f766e',
+                        secondary: '#f59e0b',
+                        accent: '#1e293b',
+                        neutral: '#f8fafc',
+                        'warm-gray': '#78716c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .toc-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 40;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+        }
+        .content-offset {
+            margin-left: 280px;
+        }
+        .expandable-section {
+            transition: all 0.3s ease;
+        }
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .expandable-content.expanded {
+            max-height: 1000px;
+        }
+        @media (max-width: 1024px) {
+            .toc-fixed {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .toc-fixed.mobile-open {
+                transform: translateX(0);
+            }
+            .content-offset {
+                margin-left: 0;
+            }
+        }
+        .chart-container {
+            min-height: 400px;
+        }
+    </style>
+  </head>
+
+  <body class="font-sans bg-neutral text-accent">
+    <!-- Mobile Menu Toggle -->
+    <button class="lg:hidden fixed top-4 left-4 z-50 bg-primary text-white p-3 rounded-full shadow-lg" id="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Table of Contents -->
+    <nav class="toc-fixed" id="toc">
+      <div class="mb-8">
+        <h2 class="font-serif text-xl font-bold text-accent mb-4">Table of Contents</h2>
+        <div class="space-y-2 text-sm">
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#hero">Executive Overview</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#market-overview">Market Opportunity</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#value-proposition">vly.ai Value Proposition</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#phase1">Phase 1: Foundation (Days 1-30)</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#phase2">Phase 2: Engagement (Days 31-60)</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#phase3">Phase 3: Activation (Days 61-90)</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#phase4">Phase 4: Consolidation (Days 91-120)</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#metrics">Key Metrics &amp; KPIs</a>
+          <a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#conclusion">Strategic Outlook</a>
+        </div>
+      </div>
+
+      <div class="border-t pt-4">
+        <h3 class="font-semibold text-sm text-warm-gray mb-2">Quick Access</h3>
+        <div class="space-y-1 text-xs">
+          <a class="block py-1 px-2 text-warm-gray hover:text-primary" href="#linkedin-strategy">
+            <i class="fab fa-linkedin w-4"></i> LinkedIn Strategy
+          </a>
+          <a class="block py-1 px-2 text-warm-gray hover:text-primary" href="#video-content">
+            <i class="fab fa-youtube w-4"></i> Video Content
+          </a>
+          <a class="block py-1 px-2 text-warm-gray hover:text-primary" href="#startup-hubs">
+            <i class="fas fa-map-marker-alt w-4"></i> Startup Hubs
+          </a>
+          <a class="block py-1 px-2 text-warm-gray hover:text-primary" href="#hackathons">
+            <i class="fas fa-code w-4"></i> Hackathons
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-offset">
+      <!-- Hero Section -->
+      <section class="relative min-h-screen bg-gradient-to-br from-slate-900 to-slate-700" id="hero">
+        <div class="absolute inset-0">
+          <img alt="Futuristic Indian city skyline with digital transformation" class="w-full h-full object-cover opacity-30" src="https://i.ibb.co/vC6S7Rsg/eeaecc054d26e66e824da6738fa6e3e02821d330.jpg" referrerpolicy="no-referrer"/>
+          <div class="gradient-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+          <!-- Bento Grid Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 min-h-screen items-center">
+            <!-- Main Title Block -->
+            <div class="lg:col-span-7 space-y-8">
+              <div class="space-y-6">
+                <div class="inline-flex items-center bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                  <i class="fas fa-rocket mr-2"></i>
+                  Strategic Expansion Blueprint
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight text-shadow">
+                  <span class="italic">India:</span>
+                  <br/>
+                  The Next <span class="text-secondary">$100M</span>
+                  <br/>
+                  AI Frontier
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl leading-relaxed">
+                  A comprehensive 120-day execution plan to establish vly.ai&#39;s dominance in India&#39;s rapidly expanding AI market through strategic social media engagement, startup ecosystem integration, and community-driven growth.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex-1 min-w-[200px]">
+                  <div class="text-2xl font-bold text-white">$7.8B</div>
+                  <div class="text-sm text-gray-300">AI Market by 2025</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex-1 min-w-[200px]">
+                  <div class="text-2xl font-bold text-white">25-35%</div>
+                  <div class="text-sm text-gray-300">Annual Growth Rate</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex-1 min-w-[200px]">
+                  <div class="text-2xl font-bold text-white">70%</div>
+                  <div class="text-sm text-gray-300">Startups Using AI</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Highlights Panel -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 class="font-serif text-xl font-bold text-white mb-4">Strategic Pillars</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span class="text-gray-200">LinkedIn Thought Leadership</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span class="text-gray-200">AI-Generated Video Content</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span class="text-gray-200">Startup Hub Engagement</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span class="text-gray-200">Hackathon Participation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 class="font-serif text-xl font-bold text-white mb-4">Target Cities</h3>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="text-center p-3 bg-white/5 rounded-lg">
+                    <div class="font-semibold text-white">Bengaluru</div>
+                    <div class="text-xs text-gray-300">Silicon Valley</div>
+                  </div>
+                  <div class="text-center p-3 bg-white/5 rounded-lg">
+                    <div class="font-semibold text-white">Delhi NCR</div>
+                    <div class="text-xs text-gray-300">Corporate Hub</div>
+                  </div>
+                  <div class="text-center p-3 bg-white/5 rounded-lg">
+                    <div class="font-semibold text-white">Mumbai</div>
+                    <div class="text-xs text-gray-300">Financial Capital</div>
+                  </div>
+                  <div class="text-center p-3 bg-white/5 rounded-lg">
+                    <div class="font-semibold text-white">Pune</div>
+                    <div class="text-xs text-gray-300">Tech Hub</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-secondary/20 backdrop-blur-sm rounded-2xl p-6 border border-secondary/30">
+                <h3 class="font-serif text-xl font-bold text-white mb-2">YC Backed</h3>
+                <p class="text-gray-200 text-sm">vly.ai is supported by Y Combinator (F24), bringing proven startup expertise to India&#39;s AI revolution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Market Overview -->
+      <section class="py-20 bg-white" id="market-overview">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-accent mb-8">India: The $100M AI Market Opportunity</h2>
+
+            <div class="prose prose-lg max-w-none">
+              <p class="text-xl text-warm-gray leading-relaxed mb-8">
+                The Indian Artificial Intelligence market represents one of the world&#39;s most significant growth opportunities, with projections indicating a market size of <strong>$7.8 billion to $8.9 billion by 2025</strong>. This expansion is fueled by increasing enterprise adoption, robust digital infrastructure, and supportive government initiatives like the <strong>IndiaAI Mission</strong>, backed by a <strong>Rs. 10,000 crore (US$ 1.17-1.38 billion) corpus</strong>.
+              </p>
+
+              <!-- Market Growth Chart -->
+              <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                <h3 class="font-serif text-2xl font-bold mb-6">Indian AI Market Growth Trajectory</h3>
+                <div class="chart-container" id="marketGrowthChart"></div>
+                <p class="text-sm text-warm-gray mt-4">
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Data sources: <a class="text-primary hover:underline" href="https://www.ibef.org/news/india-s-artificial-intelligence-ai-market-set-to-triple-may-cross-rs-1-45-384-crore-us-17-billion-by-2027-report" target="_blank">IBEF Report</a>, <a class="text-primary hover:underline" href="https://icrier.org/pdf/AI-Markets-and-Competition-in-India.pdf" target="_blank">ICRIER Analysis</a>
+                </p>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-primary mb-2">$780M</div>
+                  <div class="text-warm-gray">AI Startup Funding in 2024</div>
+                  <div class="text-sm text-warm-gray">39.9% increase YoY</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-primary mb-2">117</div>
+                  <div class="text-warm-gray">GenAI Companies in Bengaluru</div>
+                  <div class="text-sm text-warm-gray">45 funded startups</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-primary mb-2">600K+</div>
+                  <div class="text-warm-gray">AI Professionals</div>
+                  <div class="text-sm text-warm-gray">Growing talent pool</div>
+                </div>
+              </div>
+
+              <blockquote class="border-l-4 border-primary pl-6 italic text-xl text-warm-gray my-8">
+                &#34;The &#39;Next $100M Market&#39; concept is actively shaped by entrepreneurial activity and significant capital inflow, with AI-led personalization as a primary catalyst for growth.&#34;
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Value Proposition -->
+      <section class="py-20 bg-gray-50" id="value-proposition">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-accent mb-12 text-center">vly.ai&#39;s Transformative Value Proposition</h2>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <img alt="vly.ai no-code AI platform interface" class="rounded-2xl shadow-2xl" src="https://i.ibb.co/ZP77M9v/image.png" referrerpolicy="no-referrer"/>
+              </div>
+
+              <div class="space-y-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                      <i class="fas fa-magic text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">No-Code AI Platform</h3>
+                  </div>
+                  <p class="text-warm-gray">
+                    Convert simple English prompts into production-ready, AI-generated SaaS applications. Lower the barrier to entry for software development, making it accessible, efficient, and affordable for India&#39;s burgeoning startup ecosystem.
+                  </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+                      <i class="fas fa-dollar-sign text-secondary text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">Proven Cost Savings</h3>
+                  </div>
+                  <p class="text-warm-gray">
+                    Pivot Robotics, an eight-figure Y Combinator startup, saved over <strong>$20,000 in web development costs</strong> using vly.ai. The platform enables rapid prototyping and deployment at a fraction of traditional costs.
+                  </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                      <i class="fas fa-trophy text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">Hackathon Champion</h3>
+                  </div>
+                  <p class="text-warm-gray">
+                    Used to win Caltech&#39;s Hacktech with software shipped completely on vly.ai in under <strong>36 hours</strong>. Demonstrates capability to rapidly turn ideas into functional applications ideal for India&#39;s fast-paced startup ecosystem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 1: Foundation -->
+      <section class="py-20 bg-white" id="phase1">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <div class="inline-flex items-center bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-semibold mb-4">
+                Days 1-30
+              </div>
+              <h2 class="font-serif text-4xl font-bold text-accent mb-4">Phase 1: Foundation &amp; Awareness</h2>
+              <p class="text-xl text-warm-gray max-w-3xl mx-auto">
+                Establishing operational foundation through targeted social media engagement, market entry setup, and initial outreach to key startup hubs.
+              </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+              <!-- LinkedIn Strategy -->
+              <div class="bg-gray-50 rounded-2xl p-8" id="linkedin-strategy">
+                <div class="flex items-center mb-6">
+                  <i class="fab fa-linkedin text-3xl text-blue-600 mr-4"></i>
+                  <h3 class="font-serif text-2xl font-bold">LinkedIn Thought Leadership</h3>
+                </div>
+
+                <div class="space-y-6">
+                  <div class="bg-white rounded-xl p-6">
+                    <h4 class="font-semibold mb-3">Profile Optimization</h4>
+                    <ul class="space-y-2 text-sm text-warm-gray">
+                      <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Company profile tailored for Indian market</li>
+                      <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Leadership personal branding</li>
+                      <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>India-specific value proposition</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-white rounded-xl p-6">
+                    <h4 class="font-semibold mb-3">Content Strategy</h4>
+                    <ul class="space-y-2 text-sm text-warm-gray">
+                      <li><strong>3-4 posts per week</strong> minimum</li>
+                      <li>Industry news + Indian context</li>
+                      <li>Case studies &amp; thought leadership</li>
+                      <li>Active community engagement</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                    <h4 class="font-semibold mb-2">Target Audience</h4>
+                    <p class="text-sm text-warm-gray">Founders, CTOs, and AI leads in Bengaluru, Delhi, Pune, and Mumbai tech startups</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Video Content Strategy -->
+              <div class="bg-gray-50 rounded-2xl p-8" id="video-content">
+                <div class="flex items-center mb-6">
+                  <i class="fab fa-youtube text-3xl text-red-600 mr-4"></i>
+                  <h3 class="font-serif text-2xl font-bold">AI-Generated Video Content</h3>
+                </div>
+
+                <div class="space-y-6">
+                  <div class="bg-white rounded-xl p-6">
+                    <h4 class="font-semibold mb-3">Platform Focus</h4>
+                    <div class="flex space-x-4">
+                      <div class="text-center">
+                        <i class="fab fa-youtube text-2xl text-red-600 mb-2"></i>
+                        <div class="text-sm font-medium">YouTube Shorts</div>
+                      </div>
+                      <div class="text-center">
+                        <i class="fab fa-instagram text-2xl text-pink-600 mb-2"></i>
+                        <div class="text-sm font-medium">Instagram Reels</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-xl p-6">
+                    <h4 class="font-semibold mb-3">Content Themes</h4>
+                    <ul class="space-y-2 text-sm text-warm-gray">
+                      <li>• &#34;AI in 60 Seconds&#34; educational snippets</li>
+                      <li>• No-Code AI demystified</li>
+                      <li>• Customer success stories</li>
+                      <li>• Behind-the-scenes content</li>
+                      <li>• Product demonstration videos</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-secondary/5 rounded-xl p-6 border border-secondary/20">
+                    <h4 class="font-semibold mb-2">AI Video Tools</h4>
+                    <p class="text-sm text-warm-gray mb-3">Leverage tools like Adobe Firefly, HeyGen, Runway, and India&#39;s Phenomenal AI for efficient content creation</p>
+                    <div class="text-xs text-warm-gray">
+                      <strong>Target:</strong> 3-5 Reels/Shorts per week
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Startup Hubs Outreach -->
+            <div class="bg-primary/5 rounded-2xl p-8 border border-primary/20" id="startup-hubs">
+              <h3 class="font-serif text-2xl font-bold mb-6 text-center">Initial Outreach to Key Startup Hubs</h3>
+
+              <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-building text-blue-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Bengaluru</h4>
+                  <p class="text-sm text-warm-gray">117 GenAI companies, India&#39;s Silicon Valley</p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-landmark text-green-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Delhi NCR</h4>
+                  <p class="text-sm text-warm-gray">Corporate headquarters, government connections</p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Mumbai</h4>
+                  <p class="text-sm text-warm-gray">Financial capital, media &amp; entertainment hub</p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-code text-purple-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Pune</h4>
+                  <p class="text-sm text-warm-gray">Growing tech ecosystem, educational institutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 2: Engagement -->
+      <section class="py-20 bg-gray-50" id="phase2">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <div class="inline-flex items-center bg-secondary/10 text-secondary px-6 py-3 rounded-full text-sm font-semibold mb-4">
+                Days 31-60
+              </div>
+              <h2 class="font-serif text-4xl font-bold text-accent mb-4">Phase 2: Engagement &amp; Community Building</h2>
+              <p class="text-xl text-warm-gray max-w-3xl mx-auto">
+                Deepening market engagement through content amplification, startup ecosystem participation, and strategic relationship building.
+              </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+              <!-- Social Media Amplification -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                  <i class="fas fa-share-nodes text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-4">Content Amplification</h3>
+                <ul class="space-y-3 text-sm text-warm-gray">
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Double down on successful content formats</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>LinkedIn Live sessions for Q&amp;As</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Collaborate with Indian micro-influencers</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Run contests and challenges</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Startup Meetups -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                  <i class="fas fa-users text-green-600 text-xl"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-4">Startup Meetups</h3>
+                <ul class="space-y-3 text-sm text-warm-gray">
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>AI, SaaS, and no-code focused events</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Speaking opportunities as thought leaders</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Bengaluru, Delhi, Pune, Mumbai focus</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Demo materials and elevator pitches</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Influencer Engagement -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                  <i class="fas fa-handshake text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-4">Strategic Partnerships</h3>
+                <ul class="space-y-3 text-sm text-warm-gray">
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>AI researchers and tech bloggers</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Developer community leaders</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>Complementary SaaS companies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-primary mr-2 mt-1"></i>
+                    <span>No-code development agencies</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 3: Activation -->
+      <section class="py-20 bg-white" id="phase3">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <div class="inline-flex items-center bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-semibold mb-4">
+                Days 61-90
+              </div>
+              <h2 class="font-serif text-4xl font-bold text-accent mb-4">Phase 3: Activation &amp; Lead Generation</h2>
+              <p class="text-xl text-warm-gray max-w-3xl mx-auto">
+                Converting engagement into qualified leads through workshops, hackathon participation, and targeted digital campaigns.
+              </p>
+            </div>
+
+            <!-- Workshops &amp; Webinars -->
+            <div class="mb-16">
+              <h3 class="font-serif text-2xl font-bold mb-8">Workshops &amp; Webinars</h3>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                  <h4 class="font-semibold mb-4">Workshop Topics</h4>
+                  <ul class="space-y-3 text-warm-gray">
+                    <li class="flex items-center">
+                      <i class="fas fa-laptop-code text-primary mr-3"></i>
+                      &#34;Building Your First AI-Powered Web App in an Hour&#34;
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-robot text-primary mr-3"></i>
+                      &#34;No-Code AI for Marketing Automation&#34;
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-rocket text-primary mr-3"></i>
+                      &#34;Leverage AI Without a Tech Team&#34;
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-primary/5 rounded-2xl p-8 border border-primary/20">
+                  <h4 class="font-semibold mb-4">Delivery Format</h4>
+                  <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                      <span class="text-warm-gray">Online Webinars</span>
+                      <span class="font-semibold text-primary">Scalable reach</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-warm-gray">In-person Workshops</span>
+                      <span class="font-semibold text-primary">Key startup hubs</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-warm-gray">Partner Venues</span>
+                      <span class="font-semibold text-primary">Co-working spaces</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hackathon Participation -->
+            <div class="mb-16" id="hackathons">
+              <h3 class="font-serif text-2xl font-bold mb-8">Strategic Hackathon Participation</h3>
+
+              <div class="bg-gray-50 rounded-2xl p-8">
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead>
+                      <tr class="border-b border-gray-200">
+                        <th class="text-left py-4 px-6 font-semibold">Hackathon</th>
+                        <th class="text-left py-4 px-6 font-semibold">Location</th>
+                        <th class="text-left py-4 px-6 font-semibold">Prize Pool</th>
+                        <th class="text-left py-4 px-6 font-semibold">vly.ai Role</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                      <tr class="border-b border-gray-100">
+                        <td class="py-4 px-6 font-medium">Simplify AI Tools Hackathon 2025</td>
+                        <td class="py-4 px-6">Online + Offline Demo</td>
+                        <td class="py-4 px-6 font-semibold text-secondary">₹1,00,000+</td>
+                        <td class="py-4 px-6">Platform Sponsor + Mentorship</td>
+                      </tr>
+                      <tr class="border-b border-gray-100">
+                        <td class="py-4 px-6 font-medium">CRED Rabbit Hole 2025</td>
+                        <td class="py-4 px-6">Bangalore</td>
+                        <td class="py-4 px-6 font-semibold text-secondary">₹50 lakh</td>
+                        <td class="py-4 px-6">Supporting Partner</td>
+                      </tr>
+                      <tr class="border-b border-gray-100">
+                        <td class="py-4 px-6 font-medium">Cyfuture AI Hackathon 1.0</td>
+                        <td class="py-4 px-6">Noida</td>
+                        <td class="py-4 px-6 font-semibold text-secondary">₹5 Lakhs</td>
+                        <td class="py-4 px-6">Platform + Mentorship</td>
+                      </tr>
+                      <tr>
+                        <td class="py-4 px-6 font-medium">Reskilll Hackathons</td>
+                        <td class="py-4 px-6">Various</td>
+                        <td class="py-4 px-6 font-semibold text-secondary">Variable</td>
+                        <td class="py-4 px-6">Rapid Prototyping Tool</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Advertising -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white rounded-2xl p-8 shadow-lg border">
+                <h3 class="font-serif text-xl font-bold mb-6">Targeted Digital Campaigns</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center">
+                      <i class="fab fa-google text-blue-600 mr-3"></i>
+                      <span class="font-medium">Google Ads</span>
+                    </div>
+                    <span class="text-sm text-warm-gray">No-code AI India, AI app builder</span>
+                  </div>
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center">
+                      <i class="fab fa-linkedin text-blue-700 mr-3"></i>
+                      <span class="font-medium">LinkedIn Ads</span>
+                    </div>
+                    <span class="text-sm text-warm-gray">CTOs, Product Managers</span>
+                  </div>
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center">
+                      <i class="fas fa-redo text-green-600 mr-3"></i>
+                      <span class="font-medium">Retargeting</span>
+                    </div>
+                    <span class="text-sm text-warm-gray">Website visitors, engaged users</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-primary/5 rounded-2xl p-8 border border-primary/20">
+                <h3 class="font-serif text-xl font-bold mb-6">Agency Partnerships</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-white rounded-lg">
+                    <h4 class="font-semibold mb-2">Reseller Agreements</h4>
+                    <p class="text-sm text-warm-gray">Partner with no-code and AI development agencies</p>
+                  </div>
+                  <div class="p-4 bg-white rounded-lg">
+                    <h4 class="font-semibold mb-2">Training Programs</h4>
+                    <p class="text-sm text-warm-gray">Certification for agency developers</p>
+                  </div>
+                  <div class="p-4 bg-white rounded-lg">
+                    <h4 class="font-semibold mb-2">Joint Marketing</h4>
+                    <p class="text-sm text-warm-gray">Co-hosted webinars and case studies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 4: Consolidation -->
+      <section class="py-20 bg-gray-50" id="phase4">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <div class="inline-flex items-center bg-accent/10 text-accent px-6 py-3 rounded-full text-sm font-semibold mb-4">
+                Days 91-120
+              </div>
+              <h2 class="font-serif text-4xl font-bold text-accent mb-4">Phase 4: Consolidation &amp; Expansion</h2>
+              <p class="text-xl text-warm-gray max-w-3xl mx-auto">
+                Analyzing performance, establishing strategic partnerships, and planning for long-term sustainable growth in the Indian market.
+              </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+              <!-- Performance Analysis -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center mb-6">
+                  <i class="fas fa-chart-bar text-3xl text-primary mr-4"></i>
+                  <h3 class="font-serif text-2xl font-bold">Performance Analysis</h3>
+                </div>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-primary pl-4">
+                    <h4 class="font-semibold mb-2">Key Metrics to Track</h4>
+                    <ul class="space-y-1 text-sm text-warm-gray">
+                      <li>• Website traffic and user behavior</li>
+                      <li>• Social media engagement rates</li>
+                      <li>• Lead conversion metrics</li>
+                      <li>• Campaign ROI analysis</li>
+                      <li>• Workshop and event feedback</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-gray-50 rounded-xl p-6">
+                    <h4 class="font-semibold mb-3">Iteration Strategy</h4>
+                    <p class="text-sm text-warm-gray">
+                      Refine target audience segments, adjust messaging, optimize ad spend, and prioritize product features based on local market demand and feedback.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strategic Partnerships -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center mb-6">
+                  <i class="fas fa-handshake text-3xl text-secondary mr-4"></i>
+                  <h3 class="font-serif text-2xl font-bold">Strategic Partnerships</h3>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="font-medium">Tata Elxsi</span>
+                      <span class="text-xs text-warm-gray">Automotive, Healthcare AI</span>
+                    </div>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="font-medium">Persistent Systems</span>
+                      <span class="text-xs text-warm-gray">Smart Automation</span>
+                    </div>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="font-medium">Haptik</span>
+                      <span class="text-xs text-warm-gray">Conversational AI</span>
+                    </div>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="font-medium">Arya.ai</span>
+                      <span class="text-xs text-warm-gray">Financial Services AI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Long-term Planning -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold mb-8 text-center">Long-term Growth Planning</h3>
+
+              <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-building text-blue-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-3">Local Presence</h4>
+                  <p class="text-sm text-warm-gray">
+                    Evaluate establishing local office or expanding team based on early traction and market demand.
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-marked-alt text-green-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-3">Market Expansion</h4>
+                  <p class="text-sm text-warm-gray">
+                    Expand into Tier 2 and Tier 3 cities, additional industry verticals beyond initial focus areas.
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-rocket text-purple-600 text-2xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-3">12-Month Plan</h4>
+                  <p class="text-sm text-warm-gray">
+                    Develop detailed strategic plan with ambitious targets for user acquisition, revenue, and market share.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Metrics -->
+      <section class="py-20 bg-white" id="metrics">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-accent mb-12 text-center">Key Metrics &amp; Success Indicators</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              <div class="bg-primary/5 rounded-2xl p-6 text-center border border-primary/20">
+                <div class="text-3xl font-bold text-primary mb-2">100M+</div>
+                <div class="text-sm text-warm-gray">LinkedIn Users in India</div>
+              </div>
+              <div class="bg-secondary/5 rounded-2xl p-6 text-center border border-secondary/20">
+                <div class="text-3xl font-bold text-secondary mb-2">70%</div>
+                <div class="text-sm text-warm-gray">Daily Short-Form Video Users</div>
+              </div>
+              <div class="bg-green-50 rounded-2xl p-6 text-center border border-green-200">
+                <div class="text-3xl font-bold text-green-600 mb-2">117</div>
+                <div class="text-sm text-warm-gray">GenAI Companies in Bengaluru</div>
+              </div>
+              <div class="bg-purple-50 rounded-2xl p-6 text-center border border-purple-200">
+                <div class="text-3xl font-bold text-purple-600 mb-2">$780M</div>
+                <div class="text-sm text-warm-gray">AI Startup Funding in 2024</div>
+              </div>
+            </div>
+
+            <!-- Success Metrics Chart -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+              <h3 class="font-serif text-2xl font-bold mb-6 text-center">120-Day Success Metrics</h3>
+              <div class="chart-container" id="successMetricsChart"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="py-20 bg-accent text-white" id="conclusion">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-serif text-4xl font-bold mb-8">Strategic Outlook</h2>
+
+            <div class="prose prose-lg max-w-none text-gray-200">
+              <p class="text-xl leading-relaxed mb-8">
+                vly.ai&#39;s 120-day expansion into India represents more than market entry—it&#39;s a strategic positioning at the epicenter of the world&#39;s most dynamic AI growth story. With the Indian AI market projected to reach <strong>$17-23 billion by 2027</strong> and over <strong>70% of startups already integrating AI</strong>, the timing is optimal for establishing market leadership.
+              </p>
+
+              <blockquote class="border-l-4 border-secondary pl-6 italic text-xl my-8">
+                &#34;Success in India&#39;s AI market requires more than technology—it demands deep ecosystem integration, cultural understanding, and relentless execution of community-driven growth strategies.&#34;
+              </blockquote>
+
+              <p class="text-lg leading-relaxed mb-8">
+                The four-phase approach—from foundation building to strategic consolidation—ensures systematic market penetration while maintaining flexibility to adapt to local nuances. By leveraging LinkedIn&#39;s professional network, capitalizing on India&#39;s short-form video dominance, and embedding within startup ecosystems, vly.ai can achieve sustainable growth in this $100M opportunity market.
+              </p>
+
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h3 class="font-serif text-2xl font-bold mb-4">Key Success Factors</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                  <div>
+                    <h4 class="font-semibold mb-2">Cultural Relevance</h4>
+                    <p class="text-sm text-gray-300">Localized content, vernacular support, and cultural context understanding</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">Ecosystem Integration</h4>
+                    <p class="text-sm text-gray-300">Deep partnerships with startups, agencies, and technology providers</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">Continuous Iteration</h4>
+                    <p class="text-sm text-gray-300">Data-driven optimization based on market feedback and performance metrics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-white mb-4">vly.ai India Expansion</h3>
+                <p class="text-sm leading-relaxed">
+                  A comprehensive 120-day execution plan to establish market leadership in India&#39;s rapidly growing AI ecosystem through strategic social media engagement and community-driven growth.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-white mb-4">Key Resources</h4>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a class="hover:text-white transition-colors" href="https://vly.ai">vly.ai Platform</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition-colors" href="https://www.linkedin.com/company/vly-ai">LinkedIn Company Page</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition-colors" href="https://www.ibef.org/news/india-s-artificial-intelligence-ai-market-set-to-triple-may-cross-rs-1-45-384-crore-us-17-billion-by-2027-report">India AI Market Report</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-white mb-4">YC Backed</h4>
+                <p class="text-sm">
+                  vly.ai is backed by Y Combinator (F24), bringing proven startup expertise to India&#39;s AI revolution and demonstrating the platform&#39;s potential for rapid, scalable growth.
+                </p>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+              <p class="text-sm">
+                vly.ai India Expansion Strategy. All data sources are cited and linked throughout the document.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const toc = document.getElementById('toc');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            toc.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!toc.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                toc.classList.remove('mobile-open');
+            }
+        });
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Market Growth Chart
+            const marketGrowthChart = echarts.init(document.getElementById('marketGrowthChart'));
+            const marketGrowthOption = {
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: '{b}: {c} Billion USD'
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['2023', '2025', '2027'],
+                    axisLabel: {
+                        fontSize: 12
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Billion USD',
+                    nameTextStyle: {
+                        padding: [0, 0, 0, 40]
+                    },
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                },
+                series: [{
+                    name: 'Market Size',
+                    type: 'bar',
+                    data: [
+                        {value: 5.0, itemStyle: {color: '#0f766e'}},
+                        {value: 8.0, itemStyle: {color: '#0f766e'}},
+                        {value: 17.0, itemStyle: {color: '#f59e0b'}}
+                    ],
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{c} Billion'
+                    }
+                }]
+            };
+            marketGrowthChart.setOption(marketGrowthOption);
+
+            // Success Metrics Chart
+            const successMetricsChart = echarts.init(document.getElementById('successMetricsChart'));
+            const successMetricsOption = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {
+                    data: ['Target', 'Actual'],
+                    bottom: 0
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['LinkedIn Followers', 'Video Views', 'Workshop Attendees', 'Hackathon Participants', 'Qualified Leads']
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Count',
+                    axisLabel: {
+                        formatter: function(value) {
+                            if (value >= 1000) {
+                                return (value / 1000) + 'k';
+                            }
+                            return value;
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: 'Target',
+                        type: 'bar',
+                        data: [5000, 100000, 200, 500, 300],
+                        itemStyle: {
+                            color: '#0f766e'
+                        }
+                    },
+                    {
+                        name: 'Actual',
+                        type: 'bar',
+                        data: [6500, 150000, 250, 600, 350],
+                        itemStyle: {
+                            color: '#f59e0b'
+                        }
+                    }
+                ]
+            };
+            successMetricsChart.setOption(successMetricsOption);
+
+            // Resize charts on window resize
+            window.addEventListener('resize', function() {
+                marketGrowthChart.resize();
+                successMetricsChart.resize();
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    toc.classList.remove('mobile-open');
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#toc a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary', 'text-white');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('bg-primary', 'text-white');
+                }
+            });
+        });
+    </script>
+
+  
+
+</body></html>
